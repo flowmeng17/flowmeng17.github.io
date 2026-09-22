@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海卢浦大桥 - 黄浦江跨江交通枢纽与地标建筑全景指南</title>
+    <meta name="description" content="上海卢浦大桥官方介绍页面，提供桥梁结构参数、交通路线指南、周边景点游览建议及夜景摄影攻略。详细介绍卢浦大桥作为世界最大跨径钢拱桥的工程成就，以及连接浦东、浦西的交通枢纽功能。">
+    <meta name="keywords" content="上海卢浦大桥, 黄浦江大桥, 卢浦大桥交通, 上海地标, 卢浦大桥夜景, 虹桥枢纽">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-blue: #004e92;
+            --secondary-blue: #000428;
+            --accent-orange: #ff9900;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-blue);
+        }
+
+        .cta-button {
+            background-color: var(--primary-blue);
+            color: var(--white) !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0, 20, 40, 0.4), rgba(0, 20, 40, 0.6)), url('https://picsum.photos/seed/lupu_bridge/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: var(--secondary-blue);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--secondary-blue);
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 8px;
+            background-color: var(--bg-light);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Traffic Guide Section */
+        .traffic-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .traffic-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .traffic-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-blue);
+        }
+
+        .traffic-content p {
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .traffic-steps {
+            margin-top: 30px;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .traffic-image {
+            position: relative;
+        }
+
+        .traffic-image img {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--secondary-blue);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--accent-orange);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .traffic-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🚧</span> 上海卢浦大桥
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#overview" class="active">概况</a></li>
+                    <li><a href="#traffic">交通指南</a></li>
+                    <li><a href="#view">观景体验</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>上海卢浦大桥</h1>
+                <p>横跨黄浦江的宏伟钢拱桥，连接浦东与浦西的黄金纽带，世界最大跨径钢拱桥之一。</p>
+                <div class="hero-buttons">
+                    <a href="#traffic" class="btn btn-primary">查看交通路线</a>
+                    <a href="#view" class="btn btn-outline">浏览全景图集</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="info-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>桥梁概况与工程成就</h2>
+                    <p>了解卢浦大桥的建筑结构、设计参数及其在上海交通网络中的重要地位。</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🏗️</div>
+                        <h3>世界最大跨径钢拱桥</h3>
+                        <p>卢浦大桥主跨达 550 米，是世界上跨度最大的钢拱桥，其结构设计采用了先进的悬臂拼装技术，展现了卓越的工程美学。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>地理位置</h3>
+                        <p>大桥位于上海市区南部，西起卢湾区的鲁班路，东接浦东新区济阳路，是南浦大桥和卢浦大桥之间的重要过江通道。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🚗</div>
+                        <h3>交通功能</h3>
+                        <p>作为双向八车道的城市快速路，卢浦大桥极大地缓解了上海南浦大桥的交通压力，是连接市中心与浦东世博园区的重要枢纽。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traffic Guide Section -->
+        <section id="traffic" class="traffic-section">
+            <div class="container">
+                <div class="traffic-container">
+                    <div class="traffic-image">
+                        <img src="https://picsum.photos/seed/lupu_traffic/600/400.jpg" alt="卢浦大桥周边交通示意图">
+                    </div>
+                    <div class="traffic-content">
+                        <h2>交通指南与自驾路线</h2>
+                        <p>无论是自驾出行还是乘坐公共交通，前往卢浦大桥及周边区域都有多种便捷选择。以下是主要的通行方式：</p>
+                        
+                        <div class="traffic-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h4>自驾路线</h4>
+                                    <p>从市区方向前往，可通过内环高架、延安高架或南北高架转入鲁班路匝道。大桥两端设有完善的互通立交，可直接接入济阳路或龙耀路。</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <h4>公共交通</h4>
+                                    <p>地铁13号线世博大道站、龙耀路站均可步行至附近。公交方面，有龙耀路渡口、鲁班路等站点，适合短途接驳。</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <h4>限行与收费</h4>
+                                    <p>卢浦大桥属于高架道路，遵循上海市高架道路限行规定（如外地牌照限行时间）。目前不收取过路费。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="view" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>桥梁全景与夜景</h2>
+                    <p>从不同角度欣赏卢浦大桥的雄姿，感受它在日出日落与华灯初上时的不同韵味。</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item large">
+                        <img src="https://picsum.photos/seed/lupu_night/800/600.jpg" alt="卢浦大桥夜景">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/lupu_arch/400/400.jpg" alt="大桥拱门结构">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/lupu_road/400/400.jpg" alt="桥面行车视角">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/lupu_river/400/400.jpg" alt="黄浦江面倒影">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/lupu_view/400/400.jpg" alt="远眺大桥">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题 (FAQ)</h2>
+                    <p>关于卢浦大桥的使用、游玩及注意事项的解答。</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">卢浦大桥可以步行或骑行过江吗？</div>
+                        <div class="faq-answer">
+                            不可以。卢浦大桥是城市快速路，设计仅供机动车通行，严禁行人、非机动车及自行车上桥。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">哪里是最佳的观景拍照点？</div>
+                        <div class="faq-answer">
+                            推荐前往卢湾区的鲁班路匝道下方的滨江绿地，以及浦东一侧的世博园区滨江区域，视野开阔，适合拍摄大桥全景。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">大桥限高吗？</div>
+                        <div class="faq-answer">
+                            大桥净空高度约为 4.5 米，一般私家车和常见货车均可正常通行。对于超高车辆，需提前咨询交通管理部门。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">晚上开车经过大桥安全吗？</div>
+                        <div class="faq-answer">
+                            晚上大桥照明系统完善，路况清晰，是很多司机欣赏夜景的路线之一，但需注意遵守限速规定。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于卢浦大桥</h4>
+                    <ul>
+                        <li><a href="#">桥梁历史</a></li>
+                        <li><a href="#">建设团队</a></li>
+                        <li><a href="#">工程参数</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>交通服务</h4>
+                    <ul>
+                        <li><a href="#">实时路况</a></li>
+                        <li><a href="#">停车场信息</a></li>
+                        <li><a href="#">公交换乘</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">上海市交通委员会</a></li>
+                        <li><a href="#">上海市路桥管理处</a></li>
+                        <li><a href="#">世博园区游览指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <p>如有关于桥梁维护或交通咨询的问题，请联系相关部门。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 上海卢浦大桥信息服务中心. 保留所有权利. 本页面为信息展示用途.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
