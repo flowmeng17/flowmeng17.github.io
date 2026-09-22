@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="P站视频搬运工永久页 - 专业提供P站优质视频资源搬运、去水印处理及高清下载服务，包含最新搬运指南、去水印工具推荐与版权合规操作建议。">
+    <meta name="keywords" content="P站视频搬运工永久页, P站搬运, P站去水印, 视频下载, 压缩包下载, P站资源">
+    <title>P站视频搬运工永久页 - 资源搬运与去水印工具大全</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --accent-color: #3742fa;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --border-radius: 12px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Content Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 160px;
+            background-color: #dfe4ea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 3rem;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tag {
+            background-color: #ffeaa7;
+            color: #d35400;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .guide-list {
+            list-style: none;
+        }
+
+        .guide-list li {
+            margin-bottom: 10px;
+        }
+
+        .guide-list a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            display: block;
+            padding: 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .guide-list a:hover {
+            background-color: #f1f2f6;
+            color: var(--primary-color);
+        }
+
+        .notice-box {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 10px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #dfe4ea;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #dfe4ea;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                P站搬运工 <span>永久页</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">最新资源</a></li>
+                    <li><a href="#">工具下载</a></li>
+                    <li><a href="#">使用教程</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>专业P站视频搬运与去水印解决方案</h1>
+        <p>致力于提供稳定、高清的P站视频搬运服务。我们提供专业的去水印工具、批量下载指南以及版权合规的操作建议，助您轻松获取所需资源。</p>
+        <a href="#resources" class="cta-button">立即获取资源</a>
+    </section>
+
+    <main class="container">
+        <!-- Main Content -->
+        <section id="resources">
+            <div class="section-title">
+                <span>热门搬运资源</span>
+                <span style="font-size: 0.9rem; color: var(--text-light); font-weight: normal;">每日更新</span>
+            </div>
+            
+            <div class="card-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-img-placeholder">🎬</div>
+                    <div class="card-body">
+                        <h3 class="card-title">2024热门动漫番剧合集</h3>
+                        <p class="card-desc">包含最新季度的热门P站搬运资源，已处理去水印，画质清晰，适合收藏观看。</p>
+                        <div class="card-footer">
+                            <span class="tag">高清</span>
+                            <a href="#" class="download-btn">下载压缩包</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-img-placeholder">🎞️</div>
+                    <div class="card-body">
+                        <h3 class="card-title">专业级去水印工具推荐</h3>
+                        <p class="card-desc">针对P站常见水印类型的去水印软件与在线工具测评，附详细操作步骤。</p>
+                        <div class="card-footer">
+                            <span class="tag">工具</span>
+                            <a href="#" class="download-btn">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-img-placeholder">📦</div>
+                    <div class="card-body">
+                        <h3 class="card-title">批量下载脚本使用指南</h3>
+                        <p class="card-desc">提供稳定运行的浏览器脚本，支持批量采集P站视频链接，一键导出下载。</p>
+                        <div class="card-footer">
+                            <span class="tag">脚本</span>
+                            <a href="#" class="download-btn">获取脚本</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-img-placeholder">🎥</div>
+                    <div class="card-body">
+                        <h3 class="card-title">影视解说素材库</h3>
+                        <p class="card-desc">整理了大量适合二次创作和影视解说的P站视频片段，已预处理去水印。</p>
+                        <div class="card-footer">
+                            <span class="tag">素材</span>
+                            <a href="#" class="download-btn">下载资源</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="faq-section">
+                <div class="section-title">常见问题与操作指南</div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">如何使用去水印工具？</div>
+                    <div class="faq-answer">
+                        <p>请先下载并安装推荐的工具软件，打开后选择“批量处理”或“单视频处理”模式，导入P站视频链接或文件，选择对应的水印类型进行识别与去除，最后导出即可。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">下载的资源是否安全？</div>
+                    <div class="faq-answer">
+                        <p>本站提供的所有资源均经过人工筛选与病毒扫描，确保无恶意代码。建议在下载后使用系统自带的杀毒软件进行二次扫描。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">视频画质会受损吗？</div>
+                    <div class="faq-answer">
+                        <p>我们的工具采用无损或低损处理算法，在去除水印的同时最大程度保留原视频的清晰度。具体效果取决于原视频的压缩程度。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">搬运视频需要注意什么？</div>
+                    <div class="faq-answer">
+                        <p>请务必遵守相关平台的版权规定。建议仅用于个人学习、研究或合法的二次创作，避免直接用于商业用途，以免引发版权纠纷。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3>快速导航</h3>
+                <ul class="guide-list">
+                    <li><a href="#">最新搬运发布</a></li>
+                    <li><a href="#">去水印工具合集</a></li>
+                    <li><a href="#">批量下载教程</a></li>
+                    <li><a href="#">影视资源分类</a></li>
+                    <li><a href="#">会员专属服务</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>温馨提示</h3>
+                <div class="notice-box">
+                    <strong>⚠️ 版权声明：</strong><br>
+                    本站资源仅供个人学习交流使用，请勿用于商业用途。如涉及版权问题，请联系我们删除。
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>热门标签</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span style="background:#eee; padding:4px 8px; border-radius:4px; font-size:0.8rem;">P站</span>
+                    <span style="background:#eee; padding:4px 8px; border-radius:4px; font-size:0.8rem;">去水印</span>
+                    <span style="background:#eee; padding:4px 8px; border-radius:4px; font-size:0.8rem;">视频下载</span>
+                    <span style="background:#eee; padding:4px 8px; border-radius:4px; font-size:0.8rem;">高清</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系方式</a>
+            <a href="#">隐私政策</a>
+        </div>
+        <p>&copy; 2024 P站视频搬运工永久页. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
