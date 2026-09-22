@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芒果直播-热门才艺直播与实时互动娱乐平台</title>
+    <meta name="description" content="芒果直播为您提供高清流畅的实时直播体验，涵盖才艺展示、游戏竞技、户外探险及情感互动。支持手机、平板及电脑多端观看，拥有丰富的主播资源与互动玩法。">
+    <meta name="keywords" content="芒果直播, 实时直播, 在线互动, 手机直播, 才艺主播">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #f14b4b; /* 芒果红 */
+            --primary-hover: #d93d3d;
+            --accent-color: #ffb74d;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --bg-header: rgba(18, 18, 18, 0.95);
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: var(--bg-header);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1a0505 0%, #2d0e0e 100%);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            color: var(--primary-color);
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            display: flex;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            padding: 5px;
+            border: 1px solid #444;
+            max-width: 400px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            background-color: #2a2a2a;
+            border-color: #333;
+        }
+
+        .category-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Live Grid */
+        .live-section {
+            padding: 40px 0;
+            background-color: #161616;
+        }
+
+        .live-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .live-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .live-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .live-thumb {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+        }
+
+        .live-thumb img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .live-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(241, 75, 75, 0.9);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .live-viewers {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .live-info {
+            padding: 15px;
+        }
+
+        .live-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .live-anchor {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .anchor-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #333;
+            object-fit: cover;
+        }
+
+        .anchor-name {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon-box {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(241, 75, 75, 0.1), rgba(241, 75, 75, 0.05));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-text {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 60px 0 20px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            margin-top: 15px;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #1a1a1a;
+            color: #555;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 100px 20px 60px;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .nav-menu {
+                display: none; /* Simplified for mobile */
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 15px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+                <span>Mango</span>Live
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">推荐</a>
+                <a href="#">分类</a>
+                <a href="#">榜单</a>
+                <a href="#">我的</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">下载APP</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="https://picsum.photos/seed/mangohero/1920/600" alt="直播背景" class="hero-bg">
+            <div class="container hero-content">
+                <h1 class="hero-title">发现精彩瞬间<br><span>即刻加入实时互动</span></h1>
+                <p class="hero-desc">汇聚全网优质主播，涵盖音乐、舞蹈、游戏、户外等多元领域。随时随地，享受高清流畅的直播盛宴。</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索主播、房间号或关键词...">
+                    <button>搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="container categories">
+            <div class="section-header">
+                <h2 class="section-title">热门分类</h2>
+                <a href="#" style="color: var(--primary-color); font-size: 14px;">查看全部 &gt;</a>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <span class="category-icon">🎤</span>
+                    <span class="category-name">音乐现场</span>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🎮</span>
+                    <span class="category-name">游戏竞技</span>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">💃</span>
+                    <span class="category-name">舞蹈才艺</span>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🛒</span>
+                    <span class="category-name">户外探险</span>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">💄</span>
+                    <span class="category-name">颜值美妆</span>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🤝</span>
+                    <span class="category-name">情感聊天</span>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">📚</span>
+                    <span class="category-name">知识分享</span>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">⚽</span>
+                    <span class="category-name">体育赛事</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Stream Section -->
+        <section class="live-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">正在直播</h2>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-outline" style="padding: 5px 15px; font-size: 12px;">热门</button>
+                        <button class="btn btn-outline" style="padding: 5px 15px; font-size: 12px;">最新</button>
+                        <button class="btn btn-outline" style="padding: 5px 15px; font-size: 12px;">关注</button>
+                    </div>
+                </div>
+                <div class="live-grid">
+                    <!-- Card 1 -->
+                    <article class="live-card">
+                        <div class="live-thumb">
+                            <img src="https://picsum.photos/seed/guitar/400/225" alt="吉他直播">
+                            <span class="live-tag">LIVE</span>
+                            <span class="live-viewers">👁 1.2万</span>
+                        </div>
+                        <div class="live-info">
+                            <h3 class="live-title">深夜弹唱《晴天》，等你来点歌</h3>
+                            <div class="live-anchor">
+                                <img src="https://picsum.photos/seed/u1/50/50" class="anchor-avatar" alt="主播头像">
+                                <span class="anchor-name">音乐小王子</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="live-card">
+                        <div class="live-thumb">
+                            <img src="https://picsum.photos/seed/game/400/225" alt="游戏直播">
+                            <span class="live-tag">LIVE</span>
+                            <span class="live-viewers">👁 8,540</span>
+                        </div>
+                        <div class="live-info">
+                            <h3 class="live-title">峡谷五排上分，带飞全场</h3>
+                            <div class="live-anchor">
+                                <img src="https://picsum.photos/seed/u2/50/50" class="anchor-avatar" alt="主播头像">
+                                <span class="anchor-name">电竞阿杰</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="live-card">
+                        <div class="live-thumb">
+                            <img src="https://picsum.photos/seed/dance/400/225" alt="舞蹈直播">
+                            <span class="live-tag">LIVE</span>
+                            <span class="live-viewers">👁 3,200</span>
+                        </div>
+                        <div class="live-info">
+                            <h3 class="live-title">新舞种教学，零基础也能学会</h3>
+                            <div class="live-anchor">
+                                <img src="https://picsum.photos/seed/u3/50/50" class="anchor-avatar" alt="主播头像">
+                                <span class="anchor-name">舞动精灵</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="live-card">
+                        <div class="live-thumb">
+                            <img src="https://picsum.photos/seed/chat/400/225" alt="聊天直播">
+                            <span class="live-tag">LIVE</span>
+                            <span class="live-viewers">👁 5,680</span>
+                        </div>
+                        <div class="live-info">
+                            <h3 class="live-title">夜深了，聊聊天，听听故事</h3>
+                            <div class="live-anchor">
+                                <img src="https://picsum.photos/seed/u4/50/50" class="anchor-avatar" alt="主播头像">
+                                <span class="anchor-name">深夜电台</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                     <!-- Card 5 -->
+                     <article class="live-card">
+                        <div class="live-thumb">
+                            <img src="https://picsum.photos/seed/outdoor/400/225" alt="户外直播">
+                            <span class="live-tag">LIVE</span>
+                            <span class="live-viewers">👁 9,100</span>
+                        </div>
+                        <div class="live-info">
+                            <h3 class="live-title">周末露营探店，分享野餐技巧</h3>
+                            <div class="live-anchor">
+                                <img src="https://picsum.photos/seed/u5/50/50" class="anchor-avatar" alt="主播头像">
+                                <span class="anchor-name">户外老王</span>
+                            </div>
+                        </div>
+                    </article>
+
+                     <!-- Card 6 -->
+                     <article class="live-card">
+                        <div class="live-thumb">
+                            <img src="https://picsum.photos/seed/makeup/400/225" alt="美妆直播">
+                            <span class="live-tag">LIVE</span>
+                            <span class="live-viewers">👁 2,300</span>
+                        </div>
+                        <div class="live-info">
+                            <h3 class="live-title">早八人妆容教程，元气满满</h3>
+                            <div class="live-anchor">
+                                <img src="https://picsum.photos/seed/u6/50/50" class="anchor-avatar" alt="主播头像">
+                                <span class="anchor-name">美妆达人Lisa</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="container features">
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-box">⚡</div>
+                    <h3 class="feature-title">高清流畅</h3>
+                    <p class="feature-text">采用先进的推流技术，支持4K画质，无论手机还是电脑，观看体验丝滑顺畅。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">🛡️</div>
+                    <h3 class="feature-title">安全规范</h3>
+                    <p class="feature-text">严格的审核机制与社区规范，致力于为用户营造绿色、健康、积极的直播环境。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">🎁</div>
+                    <h3 class="feature-title">互动丰富</h3>
+                    <p class="feature-text">弹幕互动、礼物特效、PK对战，多种玩法让每一次观看都充满惊喜与乐趣。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>Mango</span>Live
+                    </a>
+                    <p>致力于打造最优质的实时互动娱乐平台，连接每一位热爱生活的你。在这里发现精彩，分享快乐。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">主播入驻</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方QQ群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mango Live. All Rights Reserved. 仅供演示使用</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
